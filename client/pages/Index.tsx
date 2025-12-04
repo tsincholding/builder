@@ -342,13 +342,15 @@ export default function Index() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white shadow-2xl shadow-primary/30">
+            <div className="text-lg mb-8 opacity-95" style={{ color: "rgba(206, 206, 206, 1)" }}>
+              <h1>
+                Start your free trial today. No credit card required. Deploy your
+                first VM in under a minute.
+              </h1>
+            </div>
             <h2 className="text-4xl font-bold mb-4">
               Ready to Elevate Your Infrastructure?
             </h2>
-            <p className="text-lg mb-8 opacity-95">
-              Start your free trial today. No credit card required. Deploy your
-              first VM in under a minute.
-            </p>
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-white/90 font-bold text-base px-8"
