@@ -10,7 +10,7 @@ export default function Cart() {
       name: "Starter",
       specs: "2 vCPU • 4GB RAM • 50GB SSD",
       price: 19,
-      quantity: 2,
+      quantity: 1,
     },
     {
       id: 2,
