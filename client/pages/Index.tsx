@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Zap, Shield, Globe, BarChart3, Cpu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const features = [
@@ -158,9 +159,11 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-base px-8">
-              Start Free Trial
-            </Button>
+            <Link to="/cart">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-base px-8">
+                Start Free Trial
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
@@ -270,15 +273,17 @@ export default function Index() {
                     </span>
                   </div>
 
-                  <Button
-                    className={`w-full mb-8 ${
-                      plan.highlighted
-                        ? "bg-primary hover:bg-primary/90"
-                        : "bg-foreground/10 hover:bg-foreground/20 text-foreground"
-                    }`}
-                  >
-                    {plan.cta}
-                  </Button>
+                  <Link to="/cart" className="block">
+                <Button
+                  className={`w-full mb-8 ${
+                    plan.highlighted
+                      ? "bg-primary hover:bg-primary/90"
+                      : "bg-foreground/10 hover:bg-foreground/20 text-foreground"
+                  }`}
+                >
+                  {plan.cta}
+                </Button>
+              </Link>
 
                   <div className="space-y-4">
                     {plan.specs.map((spec, specIdx) => (
