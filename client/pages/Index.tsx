@@ -109,24 +109,37 @@ export default function Index() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="font-bold text-primary-foreground text-lg">N</span>
+              <span className="font-bold text-primary-foreground text-lg">
+                N
+              </span>
             </div>
             <span className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               NodeX
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium hover:text-primary transition">
+            <a
+              href="#features"
+              className="text-sm font-medium hover:text-primary transition"
+            >
               Features
             </a>
-            <a href="#pricing" className="text-sm font-medium hover:text-primary transition">
+            <a
+              href="#pricing"
+              className="text-sm font-medium hover:text-primary transition"
+            >
               Pricing
             </a>
-            <a href="#testimonials" className="text-sm font-medium hover:text-primary transition">
+            <a
+              href="#testimonials"
+              className="text-sm font-medium hover:text-primary transition"
+            >
               Testimonials
             </a>
           </div>
-          <Button className="bg-primary hover:bg-primary/90">Get Started</Button>
+          <Button className="bg-primary hover:bg-primary/90">
+            Get Started
+          </Button>
         </nav>
       </header>
 
@@ -153,14 +166,17 @@ export default function Index() {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            Deploy production-grade virtual machines in seconds. Enterprise-level
-            performance with startup-friendly pricing. Join thousands of
-            developers and companies running on NodeX.
+            Deploy production-grade virtual machines in seconds.
+            Enterprise-level performance with startup-friendly pricing. Join
+            thousands of developers and companies running on NodeX.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link to="/cart">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-base px-8">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-base px-8"
+              >
                 Start Free Trial
               </Button>
             </Link>
@@ -235,8 +251,8 @@ export default function Index() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose the perfect plan for your needs. Always flexible to scale as
-              you grow.
+              Choose the perfect plan for your needs. Always flexible to scale
+              as you grow.
             </p>
           </div>
 
@@ -274,16 +290,16 @@ export default function Index() {
                   </div>
 
                   <Link to="/cart" className="block">
-                <Button
-                  className={`w-full mb-8 ${
-                    plan.highlighted
-                      ? "bg-primary hover:bg-primary/90"
-                      : "bg-foreground/10 hover:bg-foreground/20 text-foreground"
-                  }`}
-                >
-                  {plan.cta}
-                </Button>
-              </Link>
+                    <Button
+                      className={`w-full mb-8 ${
+                        plan.highlighted
+                          ? "bg-primary hover:bg-primary/90"
+                          : "bg-foreground/10 hover:bg-foreground/20 text-foreground"
+                      }`}
+                    >
+                      {plan.cta}
+                    </Button>
+                  </Link>
 
                   <div className="space-y-4">
                     {plan.specs.map((spec, specIdx) => (
@@ -332,7 +348,9 @@ export default function Index() {
                   "{testimonial.text}"
                 </p>
                 <div>
-                  <p className="font-bold text-foreground">{testimonial.name}</p>
+                  <p className="font-bold text-foreground">
+                    {testimonial.name}
+                  </p>
                   <p className="text-sm text-muted-foreground">
                     {testimonial.role}
                   </p>
@@ -347,10 +365,13 @@ export default function Index() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white shadow-2xl shadow-primary/30">
-            <div className="text-lg mb-8 opacity-95" style={{ color: "rgba(206, 206, 206, 1)" }}>
+            <div
+              className="text-lg mb-8 opacity-95"
+              style={{ color: "rgba(206, 206, 206, 1)" }}
+            >
               <h1>
-                Start your free trial today. No credit card required. Deploy your
-                first VM in under a minute.
+                Start your free trial today. No credit card required. Deploy
+                your first VM in under a minute.
               </h1>
             </div>
             <h2 className="text-4xl font-bold mb-4">

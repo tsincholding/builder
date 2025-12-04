@@ -23,7 +23,9 @@ export default function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -49,7 +51,9 @@ export default function Checkout() {
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="font-bold text-primary-foreground text-lg">N</span>
+                <span className="font-bold text-primary-foreground text-lg">
+                  N
+                </span>
               </div>
               <span className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 NodeX
@@ -66,8 +70,9 @@ export default function Checkout() {
             </div>
             <h1 className="text-4xl font-bold mb-4">Order Confirmed!</h1>
             <p className="text-muted-foreground mb-6">
-              Thank you for your order. Your virtual machines are being provisioned
-              and will be ready shortly. Check your email for setup instructions.
+              Thank you for your order. Your virtual machines are being
+              provisioned and will be ready shortly. Check your email for setup
+              instructions.
             </p>
             <div className="bg-card border border-border rounded-lg p-6 mb-6">
               <p className="text-sm text-muted-foreground mb-2">Order Number</p>
@@ -98,7 +103,9 @@ export default function Checkout() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="font-bold text-primary-foreground text-lg">N</span>
+              <span className="font-bold text-primary-foreground text-lg">
+                N
+              </span>
             </div>
             <span className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               NodeX
@@ -110,7 +117,10 @@ export default function Checkout() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link to="/cart" className="flex items-center gap-2 text-primary hover:text-primary/80 mb-8">
+        <Link
+          to="/cart"
+          className="flex items-center gap-2 text-primary hover:text-primary/80 mb-8"
+        >
           <ArrowLeft className="w-4 h-4" />
           <span className="font-medium">Back to Cart</span>
         </Link>
@@ -126,7 +136,9 @@ export default function Checkout() {
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Email
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -174,7 +186,9 @@ export default function Checkout() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <label className="block text-sm font-medium mb-2">Company</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Company
+                  </label>
                   <input
                     type="text"
                     name="company"
@@ -185,7 +199,9 @@ export default function Checkout() {
                   />
                 </div>
                 <div className="mt-4">
-                  <label className="block text-sm font-medium mb-2">Address</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Address
+                  </label>
                   <input
                     type="text"
                     name="address"
@@ -198,7 +214,9 @@ export default function Checkout() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">City</label>
+                    <label className="block text-sm font-medium mb-2">
+                      City
+                    </label>
                     <input
                       type="text"
                       name="city"
@@ -210,7 +228,9 @@ export default function Checkout() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">State</label>
+                    <label className="block text-sm font-medium mb-2">
+                      State
+                    </label>
                     <input
                       type="text"
                       name="state"
@@ -222,7 +242,9 @@ export default function Checkout() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">ZIP</label>
+                    <label className="block text-sm font-medium mb-2">
+                      ZIP
+                    </label>
                     <input
                       type="text"
                       name="zip"
@@ -235,7 +257,9 @@ export default function Checkout() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <label className="block text-sm font-medium mb-2">Country</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Country
+                  </label>
                   <input
                     type="text"
                     name="country"
@@ -295,7 +319,9 @@ export default function Checkout() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">CVV</label>
+                    <label className="block text-sm font-medium mb-2">
+                      CVV
+                    </label>
                     <input
                       type="text"
                       name="cvv"
@@ -327,10 +353,14 @@ export default function Checkout() {
               <div className="space-y-4 mb-6">
                 <div>
                   <p className="text-sm font-medium mb-1">Starter Plan x2</p>
-                  <p className="text-sm text-muted-foreground">$19/month each</p>
+                  <p className="text-sm text-muted-foreground">
+                    $19/month each
+                  </p>
                 </div>
                 <div className="border-t border-border pt-4">
-                  <p className="text-sm font-medium mb-1">Professional Plan x1</p>
+                  <p className="text-sm font-medium mb-1">
+                    Professional Plan x1
+                  </p>
                   <p className="text-sm text-muted-foreground">$59/month</p>
                 </div>
               </div>
@@ -351,8 +381,8 @@ export default function Checkout() {
               </div>
 
               <p className="text-xs text-muted-foreground mt-6">
-                Your billing cycle starts immediately after order confirmation. You
-                can cancel anytime.
+                Your billing cycle starts immediately after order confirmation.
+                You can cancel anytime.
               </p>
             </div>
           </div>

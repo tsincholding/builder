@@ -27,7 +27,9 @@ export default function Cart() {
       return;
     }
     setItems(
-      items.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item))
+      items.map((item) =>
+        item.id === id ? { ...item, quantity: newQuantity } : item,
+      ),
     );
   };
 
@@ -35,7 +37,10 @@ export default function Cart() {
     setItems(items.filter((item) => item.id !== id));
   };
 
-  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const subtotal = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
   const tax = subtotal * 0.1;
   const total = subtotal + tax;
 
@@ -46,7 +51,9 @@ export default function Cart() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="font-bold text-primary-foreground text-lg">N</span>
+              <span className="font-bold text-primary-foreground text-lg">
+                N
+              </span>
             </div>
             <span className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               NodeX
@@ -58,7 +65,10 @@ export default function Cart() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80 mb-8">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-primary hover:text-primary/80 mb-8"
+        >
           <ArrowLeft className="w-4 h-4" />
           <span className="font-medium">Back to Store</span>
         </Link>
@@ -85,14 +95,20 @@ export default function Cart() {
                     className="bg-card border border-border rounded-lg p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
                   >
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-2">{item.name} Plan</h3>
-                      <p className="text-muted-foreground text-sm">{item.specs}</p>
+                      <h3 className="text-lg font-bold mb-2">
+                        {item.name} Plan
+                      </h3>
+                      <p className="text-muted-foreground text-sm">
+                        {item.specs}
+                      </p>
                     </div>
 
                     <div className="flex items-center gap-4 w-full sm:w-auto">
                       <div className="flex items-center border border-border rounded-lg">
                         <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity - 1)
+                          }
                           className="p-2 hover:bg-muted transition"
                         >
                           <Minus className="w-4 h-4" />
@@ -101,7 +117,9 @@ export default function Cart() {
                           {item.quantity}
                         </span>
                         <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity + 1)
+                          }
                           className="p-2 hover:bg-muted transition"
                         >
                           <Plus className="w-4 h-4" />

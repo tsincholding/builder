@@ -101,8 +101,10 @@ export default {
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },
       backgroundImage: {
-        "gradient-nodex": "linear-gradient(135deg, #4c1d95 0%, #1e3a8a 50%, #0369a1 100%)",
-        "gradient-nodex-light": "linear-gradient(135deg, #f3e8ff 0%, #dbeafe 100%)",
+        "gradient-nodex":
+          "linear-gradient(135deg, #4c1d95 0%, #1e3a8a 50%, #0369a1 100%)",
+        "gradient-nodex-light":
+          "linear-gradient(135deg, #f3e8ff 0%, #dbeafe 100%)",
       },
     },
   },
