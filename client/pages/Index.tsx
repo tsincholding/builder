@@ -356,12 +356,14 @@ export default function Index() {
             <h2 className="text-4xl font-bold mb-4">
               Ready to Elevate Your Infrastructure?
             </h2>
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-bold text-base px-8"
-            >
-              Start Free Trial
-            </Button>
+            <Link to="/checkout">
+              <Button
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 font-bold text-base px-8"
+              >
+                Start Free Trial
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
